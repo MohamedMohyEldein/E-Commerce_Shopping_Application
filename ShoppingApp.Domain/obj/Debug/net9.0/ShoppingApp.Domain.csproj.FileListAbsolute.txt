@@ -1,0 +1,12 @@
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\bin\Debug\net9.0\ShoppingApp.Domain.deps.json
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\bin\Debug\net9.0\ShoppingApp.Domain.dll
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\bin\Debug\net9.0\ShoppingApp.Domain.pdb
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ShoppingApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ShoppingApp.Domain.AssemblyInfoInputs.cache
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ShoppingApp.Domain.AssemblyInfo.cs
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ShoppingApp.Domain.csproj.CoreCompileInputs.cache
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ShoppingApp.Domain.dll
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\refint\ShoppingApp.Domain.dll
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ShoppingApp.Domain.pdb
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ref\ShoppingApp.Domain.dll
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ShoppingApp.Domain.csproj.AssemblyReference.cache
