@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using ShoppingApp.Domain.Entities;
 using ShoppingApp.Domain.Identities;
 using ShoppingApp.Infrastructure.Persistence.ValueConverters;
-using ShoppingApp.Infrastructure.Services;
 
 namespace ShoppingApp.Infrastructure.Persistence
 {

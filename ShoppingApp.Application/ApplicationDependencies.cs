@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using ShoppingApp.Application.Common.Behaviors;
 using ShoppingApp.Application.Common.Services;
 using ShoppingApp.Application.Common.Settings;
+using ShoppingApp.Application.Features.CartItems.Commands;
 
 namespace ShoppingApp.Application
 {
@@ -39,7 +40,7 @@ namespace ShoppingApp.Application
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
             services.AddValidatorsFromAssembly(typeof(ApplicationDependencies).Assembly, includeInternalTypes: true);
 
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(ApplicationDependencies).Assembly));
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateCartItemCommand).Assembly));
             services.AddAutoMapper(cfg => { }, typeof(ApplicationDependencies).Assembly);
 
             return services;

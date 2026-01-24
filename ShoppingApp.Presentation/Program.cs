@@ -6,9 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseContentRoot(Directory.GetCurrentDirectory());
 
+builder.Services.AddInfrastructureDependencies(builder.Configuration);
 builder.Services.AddApiDependencies(builder.Configuration);
 builder.Services.AddApplicationDependencies(builder.Configuration);
-builder.Services.AddInfrastructureDependencies(builder.Configuration);
 
 var app = builder.Build();
 

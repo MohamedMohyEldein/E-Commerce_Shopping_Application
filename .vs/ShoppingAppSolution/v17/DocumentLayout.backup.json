@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.presentation\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|solutionrelative:shoppingapp.presentation\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.application\\features\\authentication\\commands\\handlers\\registercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|solutionrelative:shoppingapp.application\\features\\authentication\\commands\\handlers\\registercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.presentation\\controllers\\wishlistitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|solutionrelative:shoppingapp.presentation\\controllers\\wishlistitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.application\\features\\users\u0026roles\\commands\\handlers\\createrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|solutionrelative:shoppingapp.application\\features\\users\u0026roles\\commands\\handlers\\createrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.application\\features\\authentication\\commands\\registercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|solutionrelative:shoppingapp.application\\features\\authentication\\commands\\registercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Infrastructure\\Migrations\\20260121200913_Initial migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ShoppingApp.Infrastructure\\Migrations\\20260121200913_Initial migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.presentation\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|solutionrelative:shoppingapp.presentation\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +43,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CartItemController.cs",
-              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Presentation\\Controllers\\CartItemController.cs",
-              "RelativeDocumentMoniker": "ShoppingApp.Presentation\\Controllers\\CartItemController.cs",
-              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Presentation\\Controllers\\CartItemController.cs",
-              "RelativeToolTip": "ShoppingApp.Presentation\\Controllers\\CartItemController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwCgAAAANAAAAAAAAAA==",
+              "Title": "RegisterCommandHandler.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\RegisterCommandHandler.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\RegisterCommandHandler.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\RegisterCommandHandler.cs",
+              "RelativeToolTip": "ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\RegisterCommandHandler.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAFgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-07T15:14:00.438Z",
+              "WhenOpened": "2026-01-21T22:23:59.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterCommand.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\Commands\\RegisterCommand.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Application\\Features\\Authentication\\Commands\\RegisterCommand.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\Commands\\RegisterCommand.cs",
+              "RelativeToolTip": "ShoppingApp.Application\\Features\\Authentication\\Commands\\RegisterCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T22:23:38.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WishListItemController.cs",
-              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Presentation\\Controllers\\WishListItemController.cs",
-              "RelativeDocumentMoniker": "ShoppingApp.Presentation\\Controllers\\WishListItemController.cs",
-              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Presentation\\Controllers\\WishListItemController.cs",
-              "RelativeToolTip": "ShoppingApp.Presentation\\Controllers\\WishListItemController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAwwB4AAABnAAAAAAAAAA==",
+              "Title": "CreateRoleCommandHandler.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Users\u0026Roles\\Commands\\Handlers\\CreateRoleCommandHandler.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Application\\Features\\Users\u0026Roles\\Commands\\Handlers\\CreateRoleCommandHandler.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Users\u0026Roles\\Commands\\Handlers\\CreateRoleCommandHandler.cs",
+              "RelativeToolTip": "ShoppingApp.Application\\Features\\Users\u0026Roles\\Commands\\Handlers\\CreateRoleCommandHandler.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAABsAAABzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-07T15:12:13.21Z",
+              "WhenOpened": "2026-01-21T22:17:55.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260121200913_Initial migration.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Infrastructure\\Migrations\\20260121200913_Initial migration.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Infrastructure\\Migrations\\20260121200913_Initial migration.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Infrastructure\\Migrations\\20260121200913_Initial migration.cs",
+              "RelativeToolTip": "ShoppingApp.Infrastructure\\Migrations\\20260121200913_Initial migration.cs",
+              "ViewState": "AgIAAOUBAAAAAAAAAAAAAPkBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T20:09:13.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RolesController.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Presentation\\Controllers\\RolesController.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Presentation\\Controllers\\RolesController.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Presentation\\Controllers\\RolesController.cs",
+              "RelativeToolTip": "ShoppingApp.Presentation\\Controllers\\RolesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-21T17:17:09.609Z",
               "EditorCaption": ""
             }
           ]

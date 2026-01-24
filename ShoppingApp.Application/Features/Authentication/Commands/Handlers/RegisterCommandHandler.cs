@@ -27,9 +27,9 @@ namespace ShoppingApp.Application.Features.Authentication.Commands.Handlers
             {
                 throw new BadRequestException("Request cannot be null.");
             }
-            if (request.Email is null || request.Password is null)
+            if (request.Email is null || request.Password is null || request.FullName is null)
             { 
-                throw new BadRequestException("Email and Password cannot be null."); 
+                throw new BadRequestException("Email, Password and full name cannot be null."); 
             }
 
             AppUser? userExists = await _userManager.FindByEmailAsync(request.Email);
@@ -47,8 +47,7 @@ namespace ShoppingApp.Application.Features.Authentication.Commands.Handlers
                 Id = Ulid.NewUlid(),
                 UserName = request.Email,
                 Email = request.Email,
-                FirstName = firstName,
-                LastName = lastName
+               FullName = request.FullName
             }, request.Password);
 
             if (identityResult.Succeeded)

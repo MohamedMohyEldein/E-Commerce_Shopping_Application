@@ -183,3 +183,4 @@ D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Presentation\bin\Debug\n
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Presentation\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Presentation\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Presentation\bin\Debug\net9.0\ShoppingApp.Presentation.staticwebassets.runtime.json
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Presentation\obj\Debug\net9.0\ShoppingApp.Presentation.sourcelink.json
