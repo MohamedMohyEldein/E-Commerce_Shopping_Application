@@ -23,7 +23,7 @@ namespace ShoppingApp.Presentation.Controllers
             return Ok(result);
         }
         [HttpPost]
-        public async Task<ActionResult<OrderItemDto>> Create(Ulid orderId, [FromBody] CreateOrderItemDto? orderItem, IValidator<CreateOrderItemDto> validator)
+        public async Task<ActionResult<OrderItemDto>> CreateOrderItem(Ulid orderId, [FromBody] CreateOrderItemDto? orderItem, IValidator<CreateOrderItemDto> validator)
         {
             orderItem!.OrderId = orderId;
             try
@@ -53,7 +53,7 @@ namespace ShoppingApp.Presentation.Controllers
         //    return Ok(result);
         //}
         [HttpDelete("{OrderItemId:ulid}/{ProductVariantId:ulid}")]
-        public async Task<ActionResult> Delete(Ulid orderId, Ulid OrderItemId, Ulid ProductVariantId)
+        public async Task<ActionResult> DeleteOrderItem(Ulid orderId, Ulid OrderItemId, Ulid ProductVariantId)
         {
             var result = await _mediator.Send(new DeleteOrderItemcommand(OrderItemId, orderId, ProductVariantId));
             if (!result)

@@ -23,6 +23,7 @@ namespace ShoppingApp.Infrastructure.Repositories
         public IOrderItemRepository OrderItemRepository { get; }
         public ICartItemRepository CartItemRepository { get; }
         public IWishListItemRepository WishListItemRepository { get; }
+        public IRefreshTokenRepository RefreshToken { get; }
         public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
@@ -41,6 +42,7 @@ namespace ShoppingApp.Infrastructure.Repositories
             OrderItemRepository = new OrderItemRepository(_context);
             CartItemRepository = new CartItemRepository(_context);
             WishListItemRepository = new WishListItemRepository(_context);
+            RefreshToken = new RefreshTokenRepository(_context);
         }
 
         public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

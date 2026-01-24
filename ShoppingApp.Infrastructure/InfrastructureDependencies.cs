@@ -3,9 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using ShoppingApp.Application.Common.Services;
-using ShoppingApp.Application.Interfaces.Repositories;
 using ShoppingApp.Domain.Identities;
 using ShoppingApp.Infrastructure.Persistence;
 using ShoppingApp.Infrastructure.Repositories;
@@ -32,9 +30,10 @@ namespace ShoppingApp.Infrastructure
              })
                  .AddEntityFrameworkStores<ApplicationDbContext>()
                  .AddDefaultTokenProviders();
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            services.AddSingleton<IFileService>(sp =>
+            services.AddScoped<IFileService>(sp =>
             {
                 var env = sp.GetRequiredService<IWebHostEnvironment>();
                 return new FileService(env);

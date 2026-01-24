@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ShoppingApp.Application.Features.Categories.Commands;
 using ShoppingApp.Application.Features.Categories.DTOs;
@@ -24,6 +25,7 @@ namespace ShoppingApp.Presentation.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<ActionResult<CategoryDto>> CreateCategory([FromForm] CreateCategoryDto createCategoryDto, IValidator<CreateCategoryDto> validator, CancellationToken cancellationToken)
         {
             try
@@ -39,6 +41,7 @@ namespace ShoppingApp.Presentation.Controllers
         }
 
         [HttpPut("{id:ulid}")]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<ActionResult<CategoryDto>> UpdateCategory(Ulid id, [FromForm] UpdateCategoryDto updateCategoryDto, IValidator<UpdateCategoryDto> validator, CancellationToken cancellationToken)
         {
             try
@@ -54,6 +57,7 @@ namespace ShoppingApp.Presentation.Controllers
         }
 
         [HttpDelete("{id:ulid}")]
+        [Authorize(Policy = "AdminOnly")]
         public async Task<IActionResult> DeleteCategoryAsync(Ulid id, CancellationToken cancellationToken)
         {
             await _mediator.Send(new DeleteCategoryCommand(id), cancellationToken);

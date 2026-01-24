@@ -23,42 +23,35 @@ namespace ShoppingApp.Application.Features.Authentication.Commands.Handlers
 
         public async Task<AuthResultDto> Handle(RegisterCommand request, CancellationToken cancellationToken)
         {
-            if (request is null)
+            if (request.RegisterDto is null)
             {
-                throw new BadRequestException("Request cannot be null.");
+                throw new BadRequestException("Register DTO cannot be null.");
             }
-            if (request.Email is null || request.Password is null)
+            if (request.RegisterDto.Email is null || request.RegisterDto.Password is null || request.RegisterDto.FullName is null)
             { 
-                throw new BadRequestException("Email and Password cannot be null."); 
+                throw new BadRequestException("Email, Password and full name cannot be null."); 
             }
 
-            AppUser? userExists = await _userManager.FindByEmailAsync(request.Email);
+            AppUser? userExists = await _userManager.FindByEmailAsync(request.RegisterDto.Email);
 
             if (userExists != null)
             {
                 throw new ConflictException("User with this email already exists.");
             }
-
-            var names = request.FullName.Split(' ');
-            var firstName = names.First();
-            var lastName = string.Join(' ', names.Skip(1));
-            var identityResult = await _userManager.CreateAsync(new AppUser
+            
+            var user = new AppUser
             {
-                Id = Ulid.NewUlid(),
-                UserName = request.Email,
-                Email = request.Email,
-                FirstName = firstName,
-                LastName = lastName
-            }, request.Password);
+                Id = Ulid.NewUlid().ToString(),
+                UserName = request.RegisterDto.Email,
+                Email = request.RegisterDto.Email,
+                FullName = request.RegisterDto.FullName,
+            };
+
+            var identityResult = await _userManager.CreateAsync(user, request.RegisterDto.Password);
 
             if (identityResult.Succeeded)
             {
-                var user = await _userManager.FindByEmailAsync(request.Email);
-
-                if (user is null)
-                {
-                    throw new BadRequestException("User creation failed. Please check the provided details.");
-                }
+                await _userManager.AddToRoleAsync(user, "AppUser");
 
                 var cart = new Cart
                 {
@@ -79,14 +72,16 @@ namespace ShoppingApp.Application.Features.Authentication.Commands.Handlers
                 {
                     Email = user.Email,
                     UserId = user.Id.ToString(),
-                    Token = _jwtTokenService.GenerateJwtToken(user)
+                    Token = await _jwtTokenService.GenerateJwtToken(user),
+                    FullName = user.FullName,
                 };
 
                 return authResult;
             }
             else
             {
-                throw new BadRequestException("User creation failed. Please check the provided details.");
+                var errors = string.Join("\n", identityResult.Errors.Select(e => e.Description));
+                throw new BadRequestException($"User creation failed: {errors}");
             }
         }
     }

@@ -1,19 +1,18 @@
-﻿using System.ComponentModel;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ShoppingApp.Domain.Entities;
 using ShoppingApp.Domain.Identities;
-using ShoppingApp.Infrastructure.Persistence.ValueConverters;
 
 namespace ShoppingApp.Infrastructure.Persistence.Configurations
 {
     public class AppUserConfiguration : IEntityTypeConfiguration<AppUser>
     {
-        private static readonly UlidToStringConverter _ulidConverter = new();
         public void Configure(EntityTypeBuilder<AppUser> builder)
         {
 
-            builder.Property(p => p.Id).HasConversion(_ulidConverter).HasMaxLength(26).IsUnicode(false);
+            builder.Property(p => p.FullName)
+                .HasMaxLength(100).IsRequired();
+
             builder.HasOne(p => p.Cart)
                 .WithOne(p => p.User)
                 .HasForeignKey<Cart>(p => p.UserId)

@@ -18,7 +18,7 @@ namespace ShoppingApp.Infrastructure.Services
             // create user
             var user = new AppUser
             {
-                Id = Ulid.NewUlid(),        // runtime ULID
+                Id = Ulid.NewUlid().ToString(),        // runtime ULID
                 UserName = "testuser",
                 NormalizedUserName = "TESTUSER",
                 Email = "test@shop.com",

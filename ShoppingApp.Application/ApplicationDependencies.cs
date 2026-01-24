@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using ShoppingApp.Application.Common.Behaviors;
 using ShoppingApp.Application.Common.Services;
 using ShoppingApp.Application.Common.Settings;
+using ShoppingApp.Application.Features.CartItems.Commands;
 
 namespace ShoppingApp.Application
 {
@@ -29,17 +30,25 @@ namespace ShoppingApp.Application
                 options.TokenValidationParameters = new TokenValidationParameters()
                 {
                     ValidateIssuer = true,
-                    ValidIssuer = jwtSettings.Issuer,
+                    ValidIssuer = jwtSettings!.Issuer,
                     ValidateAudience = false,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(jwtSettings.Key))
+                    IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(jwtSettings.Key!))
                 };
+            });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+                options.AddPolicy("SuperAdminOnly", policy => policy.RequireRole("SuperAdmin"));
+                options.AddPolicy("UserOnly", policy => policy.RequireRole("AppUser"));
+                options.AddPolicy("SellerOnly", policy => policy.RequireRole("Seller"));
             });
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
             services.AddValidatorsFromAssembly(typeof(ApplicationDependencies).Assembly, includeInternalTypes: true);
 
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(ApplicationDependencies).Assembly));
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(CreateCartItemCommand).Assembly));
             services.AddAutoMapper(cfg => { }, typeof(ApplicationDependencies).Assembly);
 
             return services;

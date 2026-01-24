@@ -2,7 +2,7 @@
 
 namespace ShoppingApp.Domain.Identities
 {
-    public class AppRole : IdentityRole<Ulid>
+    public class AppRole : IdentityRole<string>
     {
     }
 }

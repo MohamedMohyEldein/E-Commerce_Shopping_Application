@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ShoppingApp.Application.Features.ProductVariants.Commands;
 using ShoppingApp.Application.Features.ProductVariants.DTOs;
@@ -29,6 +30,7 @@ namespace ShoppingApp.Presentation.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "SellerOnly")]
         public async Task<ActionResult<ProductVariantDto>> Create(Ulid productId, [FromForm] CreateProductVariantDto createProductVariantDto, IValidator<CreateProductVariantDto> validator)
         {
             createProductVariantDto.ProductId = productId;
@@ -45,6 +47,7 @@ namespace ShoppingApp.Presentation.Controllers
         }
 
         [HttpPut("{variantId:ulid}")]
+        [Authorize(Policy = "SellerOnly")]
         public async Task<ActionResult<ProductVariantDto>> Update(Ulid productId, Ulid variantId, [FromForm] UpdateProductVariantDto updateProductVariantDto, IValidator<UpdateProductVariantDto> validator)
         {
             updateProductVariantDto.Id = variantId;
@@ -63,6 +66,7 @@ namespace ShoppingApp.Presentation.Controllers
         }
 
         [HttpDelete("{variantId:ulid}")]
+        [Authorize(Policy = "SellerOnly")]
         public async Task<IActionResult> Delete(Ulid productId, Ulid variantId)
         {
             var result = await _mediator.Send(new DeleteProductVariantCommand(variantId));

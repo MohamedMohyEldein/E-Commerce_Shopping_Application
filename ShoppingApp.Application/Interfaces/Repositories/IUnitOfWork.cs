@@ -19,6 +19,6 @@ public interface IUnitOfWork : IDisposable
     public IOrderItemRepository OrderItemRepository { get; }
     public ICartItemRepository CartItemRepository { get; }
     public IWishListItemRepository WishListItemRepository { get; }
-
+    public IRefreshTokenRepository RefreshToken { get; }
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }
