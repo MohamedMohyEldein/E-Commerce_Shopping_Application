@@ -52,6 +52,115 @@
     ]
   },
   {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.CartItemController",
+    "Method": "GetAllCartItems",
+    "RelativePath": "api/CartItem/{CartId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CartId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ShoppingApp.Application.Features.CartItems.DTOs.CartItemDto, ShoppingApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.CartItemController",
+    "Method": "CreateCartItem",
+    "RelativePath": "api/CartItem/{CartId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CartId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "cartItemDto",
+        "Type": "ShoppingApp.Application.Features.CartItems.DTOs.CreateCartItemDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.CartItemController",
+    "Method": "GetCartItemById",
+    "RelativePath": "api/CartItem/{CartItemId}/{CartId}/{ProductVariantId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CartItemId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "CartId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ProductVariantId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ShoppingApp.Application.Features.CartItems.DTOs.CartItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.CartItemController",
+    "Method": "DeleteCartItem",
+    "RelativePath": "api/CartItem/{CartItemId}/{CartId}/{ProductVariantId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CartItemId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "CartId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ProductVariantId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ShoppingApp.Presentation.Controllers.CategoriesController",
     "Method": "GetAllCategories",
     "RelativePath": "api/Categories",
@@ -290,42 +399,6 @@
         "Name": "orderItem",
         "Type": "ShoppingApp.Application.Features.OrderItems.DTOs.CreateOrderItemDto",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ShoppingApp.Application.Features.OrderItems.DTOs.OrderItemDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ShoppingApp.Presentation.Controllers.OrderItemsController",
-    "Method": "Update",
-    "RelativePath": "api/Orders/{orderId}/Items/{orderItemId}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "orderId",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "orderItemId",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "orderItem",
-        "Type": "ShoppingApp.Application.Features.OrderItems.DTOs.UpdateOrderItemDto",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": [
@@ -833,6 +906,209 @@
       },
       {
         "Name": "variantId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/Roles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+    "Method": "CreateRole",
+    "RelativePath": "api/Roles",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+    "Method": "AssignUserToRole",
+    "RelativePath": "api/Roles/AssignUserToRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "roleName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+    "Method": "GetUserRoles",
+    "RelativePath": "api/Roles/GetUserRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+    "Method": "RemoveUserFromRole",
+    "RelativePath": "api/Roles/RemoveUserFromRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "roleName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.WishListItemController",
+    "Method": "GetAllWishListItems",
+    "RelativePath": "api/WishListItem/{WishListId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "WishListId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ShoppingApp.Application.Features.WishListItem.DTOs.WishListItemDto, ShoppingApp.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.WishListItemController",
+    "Method": "CreateWishListItem",
+    "RelativePath": "api/WishListItem/{WishListId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "WishListId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "wishListItemDto",
+        "Type": "ShoppingApp.Application.Features.WishListItem.DTOs.CreateWishListItemDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ShoppingApp.Application.Features.WishListItem.DTOs.WishListItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.WishListItemController",
+    "Method": "GetWishListItemById",
+    "RelativePath": "api/WishListItem/{WishListItemId}/{WishListId}/{ProductVariantId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "WishListItemId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "WishListId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ProductVariantId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ShoppingApp.Application.Features.WishListItem.DTOs.WishListItemDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.WishListItemController",
+    "Method": "DeleteWishListItem",
+    "RelativePath": "api/WishListItem/{WishListItemId}/{WishListId}/{ProductVariantId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "WishListItemId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "WishListId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ProductVariantId",
         "Type": "System.String",
         "IsRequired": true
       }

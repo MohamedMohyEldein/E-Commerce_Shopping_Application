@@ -10,3 +10,4 @@ D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ShoppingApp.Domain.pdb
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ref\ShoppingApp.Domain.dll
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ShoppingApp.Domain.csproj.AssemblyReference.cache
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Domain\obj\Debug\net9.0\ShoppingApp.Domain.sourcelink.json

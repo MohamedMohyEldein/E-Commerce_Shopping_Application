@@ -13,3 +13,4 @@ D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Application\obj\Debug\ne
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Application\obj\Debug\net9.0\refint\ShoppingApp.Application.dll
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Application\obj\Debug\net9.0\ShoppingApp.Application.pdb
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Application\obj\Debug\net9.0\ref\ShoppingApp.Application.dll
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Application\obj\Debug\net9.0\ShoppingApp.Application.sourcelink.json

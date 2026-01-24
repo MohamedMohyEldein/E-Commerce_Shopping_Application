@@ -25,7 +25,7 @@ namespace ShoppingApp.Application.Common.Services
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Name, $"{user.FirstName} {user.LastName}"),
+                new Claim(ClaimTypes.Name, user.FullName),
                 new Claim(JwtRegisteredClaimNames.Exp, expiryDate.ToString()),
                 new Claim(JwtRegisteredClaimNames.Jti, Ulid.NewUlid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString())

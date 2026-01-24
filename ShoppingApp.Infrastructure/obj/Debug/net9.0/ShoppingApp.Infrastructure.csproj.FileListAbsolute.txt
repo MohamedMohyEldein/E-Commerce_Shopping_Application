@@ -17,3 +17,4 @@ D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ref\ShoppingApp.Infrastructure.dll
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\bin\Debug\net9.0\ShoppingApp.Infrastructure.runtimeconfig.json
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ShoppingApp.Infrastructure.genruntimeconfig.cache
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ShoppingApp.Infrastructure.sourcelink.json
