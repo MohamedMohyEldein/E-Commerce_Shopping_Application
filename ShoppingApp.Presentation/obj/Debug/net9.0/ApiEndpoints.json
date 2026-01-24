@@ -8,14 +8,40 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "command",
-        "Type": "ShoppingApp.Application.Features.Authentication.Commands.LoginCommand",
-        "IsRequired": true
+        "Name": "loginDto",
+        "Type": "ShoppingApp.Application.Features.Authentication.DTOs.LoginDto",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
       {
         "Type": "ShoppingApp.Application.Features.Authentication.DTOs.AuthResultDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.AuthController",
+    "Method": "PostRefreshToken",
+    "RelativePath": "api/Auth/refresh-token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "refreshTokenDto",
+        "Type": "ShoppingApp.Application.Features.Authentication.DTOs.RefreshTokenDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ShoppingApp.Application.Features.Authentication.DTOs.RefreshTokenResultDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -34,9 +60,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "command",
-        "Type": "ShoppingApp.Application.Features.Authentication.Commands.RegisterCommand",
-        "IsRequired": true
+        "Name": "registerDto",
+        "Type": "ShoppingApp.Application.Features.Authentication.DTOs.RegisterDto",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -384,7 +410,7 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.OrderItemsController",
-    "Method": "Create",
+    "Method": "CreateOrderItem",
     "RelativePath": "api/Orders/{orderId}/Items",
     "HttpMethod": "POST",
     "IsController": true,
@@ -451,7 +477,7 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.OrderItemsController",
-    "Method": "Delete",
+    "Method": "DeleteOrderItem",
     "RelativePath": "api/Orders/{orderId}/Items/{OrderItemId}/{ProductVariantId}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -914,6 +940,7 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+<<<<<<< HEAD
     "Method": "GetAllRoles",
     "RelativePath": "api/Roles",
     "HttpMethod": "GET",
@@ -924,6 +951,8 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+=======
+>>>>>>> 5a54dd5
     "Method": "CreateRole",
     "RelativePath": "api/Roles",
     "HttpMethod": "POST",
@@ -940,6 +969,35 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+<<<<<<< HEAD
+=======
+    "Method": "AddUserClaim",
+    "RelativePath": "api/Roles/AddUserClaim",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "claimType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "claimValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+>>>>>>> 5a54dd5
     "Method": "AssignUserToRole",
     "RelativePath": "api/Roles/AssignUserToRole",
     "HttpMethod": "POST",
@@ -961,6 +1019,45 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+<<<<<<< HEAD
+=======
+    "Method": "DeleteUser",
+    "RelativePath": "api/Roles/DeleteUser",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+    "Method": "GetAllRoles",
+    "RelativePath": "api/Roles/GetAllRoles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/Roles/GetAllUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
+>>>>>>> 5a54dd5
     "Method": "GetUserRoles",
     "RelativePath": "api/Roles/GetUserRoles",
     "HttpMethod": "GET",

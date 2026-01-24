@@ -15,10 +15,14 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2b8fc685c38db93c839c642d47528dfde7b762d")]
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b230affaf1c8384899ac688e4aeeec483b4152d7")]
 >>>>>>> recovered-auth
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f898611bd69dc4ebf9b1db8ac59093273ee7e5f")]
+>>>>>>> 5a54dd5
 [assembly: System.Reflection.AssemblyProductAttribute("ShoppingApp.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShoppingApp.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

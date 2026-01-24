@@ -6,6 +6,7 @@
 =======
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.application\\features\\authentication\\commands\\handlers\\registercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|solutionrelative:shoppingapp.application\\features\\authentication\\commands\\handlers\\registercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -24,6 +25,50 @@
     {
       "AbsoluteMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.presentation\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|solutionrelative:shoppingapp.presentation\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.application\\features\\authentication\\commands\\handlers\\refreshtokencommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|solutionrelative:shoppingapp.application\\features\\authentication\\commands\\handlers\\refreshtokencommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|solutionrelative:shoppingapp.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.application\\features\\authentication\\dtos\\refreshtokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|solutionrelative:shoppingapp.application\\features\\authentication\\dtos\\refreshtokendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EB5099F-D046-4930-97CA-FA42E73881F6}|ShoppingApp.Domain\\ShoppingApp.Domain.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.domain\\identities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EB5099F-D046-4930-97CA-FA42E73881F6}|ShoppingApp.Domain\\ShoppingApp.Domain.csproj|solutionrelative:shoppingapp.domain\\identities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.application\\features\\authentication\\commands\\refreshtokencommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|solutionrelative:shoppingapp.application\\features\\authentication\\commands\\refreshtokencommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{541DEEBD-5696-4DCD-A71A-E036A36DA16F}|ShoppingApp.Infrastructure\\ShoppingApp.Infrastructure.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.infrastructure\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{541DEEBD-5696-4DCD-A71A-E036A36DA16F}|ShoppingApp.Infrastructure\\ShoppingApp.Infrastructure.csproj|solutionrelative:shoppingapp.infrastructure\\repositories\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.application\\interfaces\\repositories\\irefreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|solutionrelative:shoppingapp.application\\interfaces\\repositories\\irefreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.application\\features\\authentication\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|solutionrelative:shoppingapp.application\\features\\authentication\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.application\\features\\authentication\\commands\\handlers\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|solutionrelative:shoppingapp.application\\features\\authentication\\commands\\handlers\\logincommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FC628339-F971-491E-A32C-F828121EBBED}|ShoppingApp.Presentation\\ShoppingApp.Presentation.csproj|solutionrelative:shoppingapp.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|d:\\asp.netcore_projects\\shoppingappsolution\\shoppingapp.application\\features\\authentication\\dtos\\authresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03CC8282-8489-4984-BB5A-42A263C2CF6B}|ShoppingApp.Application\\ShoppingApp.Application.csproj|solutionrelative:shoppingapp.application\\features\\authentication\\dtos\\authresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 5a54dd5
     }
   ],
 >>>>>>> recovered-auth
@@ -34,7 +79,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": -1,
+=======
+          "SelectedChildIndex": 5,
+>>>>>>> 5a54dd5
           "Children": [
             {
               "$type": "Bookmark",
@@ -48,6 +97,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
               "Title": "RegisterCommandHandler.cs",
               "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\RegisterCommandHandler.cs",
@@ -70,11 +120,23 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T22:23:38.539Z",
+=======
+              "DocumentIndex": 2,
+              "Title": "RefreshTokenDto.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\DTOs\\RefreshTokenDto.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Application\\Features\\Authentication\\DTOs\\RefreshTokenDto.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\DTOs\\RefreshTokenDto.cs",
+              "RelativeToolTip": "ShoppingApp.Application\\Features\\Authentication\\DTOs\\RefreshTokenDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T21:22:51.655Z",
+>>>>>>> 5a54dd5
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
               "Title": "CreateRoleCommandHandler.cs",
               "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Users\u0026Roles\\Commands\\Handlers\\CreateRoleCommandHandler.cs",
               "RelativeDocumentMoniker": "ShoppingApp.Application\\Features\\Users\u0026Roles\\Commands\\Handlers\\CreateRoleCommandHandler.cs",
@@ -83,6 +145,133 @@
               "ViewState": "AgIAABEAAAAAAAAAAAAAABsAAABzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-21T22:17:55.107Z",
+=======
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Presentation\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Presentation\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Presentation\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ShoppingApp.Presentation\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwB0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T21:21:50.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Domain\\Identities\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Domain\\Identities\\RefreshToken.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Domain\\Identities\\RefreshToken.cs",
+              "RelativeToolTip": "ShoppingApp.Domain\\Identities\\RefreshToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T20:16:00.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RefreshTokenCommandHandler.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\RefreshTokenCommandHandler.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\RefreshTokenCommandHandler.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\RefreshTokenCommandHandler.cs",
+              "RelativeToolTip": "ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\RefreshTokenCommandHandler.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAuwCoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T20:36:12.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RefreshTokenCommand.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\Commands\\RefreshTokenCommand.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Application\\Features\\Authentication\\Commands\\RefreshTokenCommand.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\Commands\\RefreshTokenCommand.cs",
+              "RelativeToolTip": "ShoppingApp.Application\\Features\\Authentication\\Commands\\RefreshTokenCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T20:33:45.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RefreshTokenRepository.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Infrastructure\\Repositories\\RefreshTokenRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Infrastructure\\Repositories\\RefreshTokenRepository.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Infrastructure\\Repositories\\RefreshTokenRepository.cs",
+              "RelativeToolTip": "ShoppingApp.Infrastructure\\Repositories\\RefreshTokenRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T20:07:20.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IRefreshTokenRepository.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Interfaces\\Repositories\\IRefreshTokenRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Application\\Interfaces\\Repositories\\IRefreshTokenRepository.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Interfaces\\Repositories\\IRefreshTokenRepository.cs",
+              "RelativeToolTip": "ShoppingApp.Application\\Interfaces\\Repositories\\IRefreshTokenRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T20:05:45.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\DTOs\\LoginDto.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Application\\Features\\Authentication\\DTOs\\LoginDto.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\DTOs\\LoginDto.cs",
+              "RelativeToolTip": "ShoppingApp.Application\\Features\\Authentication\\DTOs\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T19:54:17.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "ShoppingApp.Presentation\\appsettings.json",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Presentation\\appsettings.json",
+              "RelativeToolTip": "ShoppingApp.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-23T19:53:41.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthResultDto.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\DTOs\\AuthResultDto.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Application\\Features\\Authentication\\DTOs\\AuthResultDto.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\DTOs\\AuthResultDto.cs",
+              "RelativeToolTip": "ShoppingApp.Application\\Features\\Authentication\\DTOs\\AuthResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T19:53:06.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginCommandHandler.cs",
+              "DocumentMoniker": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\LoginCommandHandler.cs",
+              "RelativeDocumentMoniker": "ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\LoginCommandHandler.cs",
+              "ToolTip": "D:\\Asp.NetCore_Projects\\ShoppingAppSolution\\ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\LoginCommandHandler.cs",
+              "RelativeToolTip": "ShoppingApp.Application\\Features\\Authentication\\Commands\\Handlers\\LoginCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T19:51:53.258Z",
+>>>>>>> 5a54dd5
               "EditorCaption": ""
             },
             {

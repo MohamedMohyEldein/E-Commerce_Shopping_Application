@@ -6,7 +6,7 @@ namespace ShoppingApp.Domain.Entities
     public class Order
     {
         public Ulid Id { get; set; }
-        public Ulid UserId { get; set; }
+        public string UserId { get; set; }
         public DateTime OrderDate { get; set; }
         public OrderStatus Status { get; set; }
         //public decimal TotalAmount { get; set; }

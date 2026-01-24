@@ -12,7 +12,6 @@ namespace ShoppingApp.Infrastructure.Persistence.Configurations
         public void Configure(EntityTypeBuilder<Cart> builder)
         {
             builder.Property(p => p.Id).HasConversion(_ulidConverter).HasMaxLength(26).IsUnicode(false);
-            builder.Property(p => p.UserId).HasConversion(_ulidConverter).HasMaxLength(26).IsUnicode(false);
             builder.ToTable("Cart").HasKey(p => p.Id);
             builder.HasMany(e => e.Items)
                 .WithOne(e => e.Cart)
