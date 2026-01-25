@@ -940,19 +940,6 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
-<<<<<<< HEAD
-    "Method": "GetAllRoles",
-    "RelativePath": "api/Roles",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
-=======
->>>>>>> 5a54dd5
     "Method": "CreateRole",
     "RelativePath": "api/Roles",
     "HttpMethod": "POST",
@@ -969,8 +956,6 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
-<<<<<<< HEAD
-=======
     "Method": "AddUserClaim",
     "RelativePath": "api/Roles/AddUserClaim",
     "HttpMethod": "POST",
@@ -997,7 +982,6 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
->>>>>>> 5a54dd5
     "Method": "AssignUserToRole",
     "RelativePath": "api/Roles/AssignUserToRole",
     "HttpMethod": "POST",
@@ -1019,8 +1003,6 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
-<<<<<<< HEAD
-=======
     "Method": "DeleteUser",
     "RelativePath": "api/Roles/DeleteUser",
     "HttpMethod": "DELETE",
@@ -1057,7 +1039,6 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
->>>>>>> 5a54dd5
     "Method": "GetUserRoles",
     "RelativePath": "api/Roles/GetUserRoles",
     "HttpMethod": "GET",

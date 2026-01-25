@@ -33,19 +33,7 @@ namespace ShoppingApp.Application.Common.Services
 
             var expiryDate = DateTime.UtcNow.AddMinutes(_jwtSettings.ExpiryMinutes);
 
-<<<<<<< HEAD
-            var claims = new Claim[]
-            {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Name, user.FullName),
-                new Claim(JwtRegisteredClaimNames.Exp, expiryDate.ToString()),
-                new Claim(JwtRegisteredClaimNames.Jti, Ulid.NewUlid().ToString()),
-                new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString())
-            };
-=======
             var claims = await GetClaimsAsync(user);
->>>>>>> 5a54dd5
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

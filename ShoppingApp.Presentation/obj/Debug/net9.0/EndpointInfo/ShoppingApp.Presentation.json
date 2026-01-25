@@ -101,8 +101,6 @@
         }
       }
     },
-<<<<<<< HEAD
-=======
     "/api/Auth/refresh-token": {
       "post": {
         "tags": [
@@ -151,7 +149,6 @@
         }
       }
     },
->>>>>>> 5a54dd5
     "/api/CartItem/{CartId}": {
       "get": {
         "tags": [
@@ -1569,11 +1566,7 @@
         }
       }
     },
-<<<<<<< HEAD
-    "/api/Roles": {
-=======
     "/api/Roles/GetAllUsers": {
->>>>>>> 5a54dd5
       "get": {
         "tags": [
           "Roles"
@@ -1583,9 +1576,6 @@
             "description": "OK"
           }
         }
-<<<<<<< HEAD
-      },
-=======
       }
     },
     "/api/Roles/GetAllRoles": {
@@ -1601,7 +1591,6 @@
       }
     },
     "/api/Roles": {
->>>>>>> 5a54dd5
       "post": {
         "tags": [
           "Roles"
@@ -1678,8 +1667,6 @@
         }
       }
     },
-<<<<<<< HEAD
-=======
     "/api/Roles/AddUserClaim": {
       "post": {
         "tags": [
@@ -1736,7 +1723,6 @@
         }
       }
     },
->>>>>>> 5a54dd5
     "/api/WishListItem/{WishListId}": {
       "get": {
         "tags": [
@@ -2004,49 +1990,6 @@
         },
         "additionalProperties": false
       },
-      "CartItemDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "$ref": "#/components/schemas/Ulid"
-          },
-          "cartId": {
-            "$ref": "#/components/schemas/Ulid"
-          },
-          "productVariantId": {
-            "$ref": "#/components/schemas/Ulid"
-          },
-          "imageUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "color": {
-            "type": "string",
-            "nullable": true
-          },
-          "size": {
-            "type": "string",
-            "nullable": true
-          },
-          "price": {
-            "type": "number",
-            "format": "double"
-          },
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
       "CategoryDto": {
         "type": "object",
         "properties": {
@@ -2109,25 +2052,6 @@
           "quantity": {
             "type": "integer",
             "format": "int32"
-<<<<<<< HEAD
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateWishListItemDto": {
-        "type": "object",
-        "properties": {
-          "wishlistId": {
-            "$ref": "#/components/schemas/Ulid"
-          },
-          "productVariantId": {
-            "$ref": "#/components/schemas/Ulid"
-          },
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
-=======
->>>>>>> 5a54dd5
           }
         },
         "additionalProperties": false

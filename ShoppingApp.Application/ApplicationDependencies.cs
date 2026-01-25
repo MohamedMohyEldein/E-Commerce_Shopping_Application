@@ -40,7 +40,10 @@ namespace ShoppingApp.Application
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+                options.AddPolicy("AdminOnly", policy => {
+                    policy.RequireAssertion(context =>
+                        context.User.IsInRole("Admin") || context.User.IsInRole("SuperAdmin"));
+                });
                 options.AddPolicy("SuperAdminOnly", policy => policy.RequireRole("SuperAdmin"));
                 options.AddPolicy("UserOnly", policy => policy.RequireRole("AppUser"));
                 options.AddPolicy("SellerOnly", policy => policy.RequireRole("Seller"));
