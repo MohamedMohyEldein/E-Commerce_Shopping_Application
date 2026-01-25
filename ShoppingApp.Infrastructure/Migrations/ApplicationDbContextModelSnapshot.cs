@@ -22,11 +22,8 @@ namespace ShoppingApp.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Ulid>", b =>
-=======
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
->>>>>>> 5a54dd5
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -42,12 +39,8 @@ namespace ShoppingApp.Infrastructure.Migrations
 
                     b.Property<string>("RoleId")
                         .IsRequired()
-<<<<<<< HEAD
-                        .HasMaxLength(26)
-                        .HasColumnType("nvarchar(26)");
-=======
+
                         .HasColumnType("nvarchar(450)");
->>>>>>> 5a54dd5
 
                     b.HasKey("Id");
 
@@ -56,11 +49,8 @@ namespace ShoppingApp.Infrastructure.Migrations
                     b.ToTable("AspNetRoleClaims", (string)null);
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Ulid>", b =>
-=======
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
->>>>>>> 5a54dd5
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -76,12 +66,8 @@ namespace ShoppingApp.Infrastructure.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-<<<<<<< HEAD
-                        .HasMaxLength(26)
-                        .HasColumnType("varchar(26)");
-=======
+
                         .HasColumnType("nvarchar(450)");
->>>>>>> 5a54dd5
 
                     b.HasKey("Id");
 
@@ -90,11 +76,8 @@ namespace ShoppingApp.Infrastructure.Migrations
                     b.ToTable("AspNetUserClaims", (string)null);
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Ulid>", b =>
-=======
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
->>>>>>> 5a54dd5
                 {
                     b.Property<string>("LoginProvider")
                         .HasColumnType("nvarchar(450)");
@@ -107,12 +90,8 @@ namespace ShoppingApp.Infrastructure.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-<<<<<<< HEAD
-                        .HasMaxLength(26)
-                        .HasColumnType("varchar(26)");
-=======
+
                         .HasColumnType("nvarchar(450)");
->>>>>>> 5a54dd5
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -121,17 +100,7 @@ namespace ShoppingApp.Infrastructure.Migrations
                     b.ToTable("AspNetUserLogins", (string)null);
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Ulid>", b =>
-                {
-                    b.Property<string>("UserId")
-                        .HasMaxLength(26)
-                        .HasColumnType("varchar(26)");
 
-                    b.Property<string>("RoleId")
-                        .HasMaxLength(26)
-                        .HasColumnType("nvarchar(26)");
-=======
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
                 {
                     b.Property<string>("UserId")
@@ -139,7 +108,6 @@ namespace ShoppingApp.Infrastructure.Migrations
 
                     b.Property<string>("RoleId")
                         .HasColumnType("nvarchar(450)");
->>>>>>> 5a54dd5
 
                     b.HasKey("UserId", "RoleId");
 
@@ -148,18 +116,11 @@ namespace ShoppingApp.Infrastructure.Migrations
                     b.ToTable("AspNetUserRoles", (string)null);
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Ulid>", b =>
-                {
-                    b.Property<string>("UserId")
-                        .HasMaxLength(26)
-                        .HasColumnType("varchar(26)");
-=======
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
->>>>>>> 5a54dd5
 
                     b.Property<string>("LoginProvider")
                         .HasColumnType("nvarchar(450)");
@@ -184,13 +145,8 @@ namespace ShoppingApp.Infrastructure.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-<<<<<<< HEAD
-                        .HasMaxLength(26)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(26)");
-=======
+
                         .HasColumnType("nvarchar(450)");
->>>>>>> 5a54dd5
 
                     b.HasKey("Id");
 
@@ -273,13 +229,8 @@ namespace ShoppingApp.Infrastructure.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-<<<<<<< HEAD
-                        .HasMaxLength(26)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(26)");
-=======
+
                         .HasColumnType("nvarchar(450)");
->>>>>>> 5a54dd5
 
                     b.HasKey("Id");
 
@@ -408,13 +359,8 @@ namespace ShoppingApp.Infrastructure.Migrations
 
                     b.Property<string>("UserId")
                         .IsRequired()
-<<<<<<< HEAD
-                        .HasMaxLength(26)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(26)");
-=======
+
                         .HasColumnType("nvarchar(450)");
->>>>>>> 5a54dd5
 
                     b.HasKey("Id");
 
@@ -458,12 +404,8 @@ namespace ShoppingApp.Infrastructure.Migrations
             modelBuilder.Entity("ShoppingApp.Domain.Identities.AppRole", b =>
                 {
                     b.Property<string>("Id")
-<<<<<<< HEAD
-                        .HasMaxLength(26)
-                        .HasColumnType("nvarchar(26)");
-=======
+
                         .HasColumnType("nvarchar(450)");
->>>>>>> 5a54dd5
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -490,13 +432,8 @@ namespace ShoppingApp.Infrastructure.Migrations
             modelBuilder.Entity("ShoppingApp.Domain.Identities.AppUser", b =>
                 {
                     b.Property<string>("Id")
-<<<<<<< HEAD
-                        .HasMaxLength(26)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(26)");
-=======
+
                         .HasColumnType("nvarchar(450)");
->>>>>>> 5a54dd5
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
@@ -506,10 +443,7 @@ namespace ShoppingApp.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-<<<<<<< HEAD
-                        .IsRequired()
-=======
->>>>>>> 5a54dd5
+
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
@@ -518,12 +452,9 @@ namespace ShoppingApp.Infrastructure.Migrations
 
                     b.Property<string>("FullName")
                         .IsRequired()
-<<<<<<< HEAD
-                        .HasColumnType("nvarchar(max)");
-=======
+
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
->>>>>>> 5a54dd5
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -558,13 +489,7 @@ namespace ShoppingApp.Infrastructure.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
-<<<<<<< HEAD
-                    b.Property<string>("password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
-=======
->>>>>>> 5a54dd5
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -578,9 +503,7 @@ namespace ShoppingApp.Infrastructure.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Ulid>", b =>
-=======
+
             modelBuilder.Entity("ShoppingApp.Domain.Identities.RefreshToken", b =>
                 {
                     b.Property<string>("Id")
@@ -614,7 +537,6 @@ namespace ShoppingApp.Infrastructure.Migrations
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
->>>>>>> 5a54dd5
                 {
                     b.HasOne("ShoppingApp.Domain.Identities.AppRole", null)
                         .WithMany()
@@ -623,11 +545,8 @@ namespace ShoppingApp.Infrastructure.Migrations
                         .IsRequired();
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Ulid>", b =>
-=======
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
->>>>>>> 5a54dd5
                 {
                     b.HasOne("ShoppingApp.Domain.Identities.AppUser", null)
                         .WithMany()
@@ -636,11 +555,8 @@ namespace ShoppingApp.Infrastructure.Migrations
                         .IsRequired();
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Ulid>", b =>
-=======
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
->>>>>>> 5a54dd5
                 {
                     b.HasOne("ShoppingApp.Domain.Identities.AppUser", null)
                         .WithMany()
@@ -649,11 +565,8 @@ namespace ShoppingApp.Infrastructure.Migrations
                         .IsRequired();
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Ulid>", b =>
-=======
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
->>>>>>> 5a54dd5
                 {
                     b.HasOne("ShoppingApp.Domain.Identities.AppRole", null)
                         .WithMany()
@@ -668,11 +581,8 @@ namespace ShoppingApp.Infrastructure.Migrations
                         .IsRequired();
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Ulid>", b =>
-=======
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
->>>>>>> 5a54dd5
                 {
                     b.HasOne("ShoppingApp.Domain.Identities.AppUser", null)
                         .WithMany()
@@ -793,8 +703,7 @@ namespace ShoppingApp.Infrastructure.Migrations
                     b.Navigation("Wishlist");
                 });
 
-<<<<<<< HEAD
-=======
+
             modelBuilder.Entity("ShoppingApp.Domain.Identities.RefreshToken", b =>
                 {
                     b.HasOne("ShoppingApp.Domain.Identities.AppUser", "User")
@@ -806,7 +715,6 @@ namespace ShoppingApp.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
->>>>>>> 5a54dd5
             modelBuilder.Entity("ShoppingApp.Domain.Entities.Cart", b =>
                 {
                     b.Navigation("Items");
@@ -846,11 +754,9 @@ namespace ShoppingApp.Infrastructure.Migrations
 
                     b.Navigation("Orders");
 
-<<<<<<< HEAD
-=======
+
                     b.Navigation("RefreshTokens");
 
->>>>>>> 5a54dd5
                     b.Navigation("Wishlist")
                         .IsRequired();
                 });

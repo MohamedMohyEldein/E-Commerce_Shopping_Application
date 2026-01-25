@@ -1,21 +1,15 @@
 ﻿using MediatR;
-<<<<<<< HEAD
-using Microsoft.AspNetCore.Mvc;
-using ShoppingApp.Application.Features.Users_Roles.Commands;
-=======
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ShoppingApp.Application.Features.Users_Roles.Commands;
 using ShoppingApp.Application.Features.Users_Roles.Commands.Handlers;
->>>>>>> 5a54dd5
 using ShoppingApp.Application.Features.Users_Roles.Queries;
 
 namespace ShoppingApp.Presentation.Controllers
 {
-<<<<<<< HEAD
-=======
+
     [Authorize(Policy = "AdminOnly")]
->>>>>>> 5a54dd5
     public class RolesController(IMediator mediator) : BaseController(mediator)
     {
         [HttpGet("GetUserRoles")]
@@ -25,9 +19,7 @@ namespace ShoppingApp.Presentation.Controllers
             return Ok(result);
         }
 
-<<<<<<< HEAD
-        [HttpGet]
-=======
+
         [HttpGet("GetAllUsers")]
         public async Task<IActionResult> GetAllUsers()
         {
@@ -36,7 +28,6 @@ namespace ShoppingApp.Presentation.Controllers
         }
 
         [HttpGet("GetAllRoles")]
->>>>>>> 5a54dd5
         public async Task<IActionResult> GetAllRoles()
         {
             var result = await _mediator.Send(new GetAllRolesQuery());
@@ -44,10 +35,8 @@ namespace ShoppingApp.Presentation.Controllers
         }
 
         [HttpPost]
-<<<<<<< HEAD
-=======
+
         [Authorize(Policy = "SuperAdminOnly")]
->>>>>>> 5a54dd5
         public async Task<IActionResult> CreateRole(string? roleName)
         {
             var result = await _mediator.Send(new CreateRoleCommand(roleName));
@@ -58,10 +47,8 @@ namespace ShoppingApp.Presentation.Controllers
         }
 
         [HttpPost("AssignUserToRole")]
-<<<<<<< HEAD
-=======
+
         [Authorize(Policy = "SuperAdminOnly")]
->>>>>>> 5a54dd5
         public async Task<IActionResult> AssignUserToRole(string? email, string? roleName)
         {
             var result = await _mediator.Send(new AssignUserToRoleCommand(email, roleName));
@@ -72,10 +59,8 @@ namespace ShoppingApp.Presentation.Controllers
         }
 
         [HttpPost("RemoveUserFromRole")]
-<<<<<<< HEAD
-=======
+
         [Authorize(Policy = "SuperAdminOnly")]
->>>>>>> 5a54dd5
         public async Task<IActionResult> RemoveUserFromRole(string? email, string? roleName)
         {
             var result = await _mediator.Send(new RemoveUserFromRoleCommand(email, roleName));
@@ -84,8 +69,7 @@ namespace ShoppingApp.Presentation.Controllers
 
             return Ok("User removed from role successfully.");
         }
-<<<<<<< HEAD
-=======
+
 
         [HttpPost("AddUserClaim")]
         [Authorize(Policy = "SuperAdminOnly")]
@@ -104,6 +88,5 @@ namespace ShoppingApp.Presentation.Controllers
             if (!result) return BadRequest("User could not be deleted.");
             return Ok("User deleted successfully.");
         }
->>>>>>> 5a54dd5
     }
 }
