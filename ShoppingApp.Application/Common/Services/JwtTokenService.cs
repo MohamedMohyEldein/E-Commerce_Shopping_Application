@@ -89,6 +89,6 @@ namespace ShoppingApp.Application.Common.Services
             return claims;
         }
 
-        public string GenerateRefreshToken() => Convert.ToBase64String(RandomNumberGenerator.GetBytes(32));
+        public string GenerateRefreshToken() => Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
     }
 }

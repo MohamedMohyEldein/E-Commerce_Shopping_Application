@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
 using ShoppingApp.Domain.Exceptions;
 using ShoppingApp.Domain.Identities;
@@ -25,7 +25,7 @@ namespace ShoppingApp.Application.Features.Users_Roles.Commands.Handlers
                 throw new BadRequestException($"Role '{request.RoleName}' already exists.");
             }
 
-            var result = await _roleManager.CreateAsync(new AppRole() {Name = request.RoleName, Id = Ulid.NewUlid().ToString()});
+            var result = await _roleManager.CreateAsync(new AppRole() {Name = request.RoleName, Id = Ulid.NewUlid()});
 
             if (result.Succeeded)
             {
