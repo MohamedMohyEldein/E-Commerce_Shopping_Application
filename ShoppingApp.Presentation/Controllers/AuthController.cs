@@ -9,6 +9,7 @@ namespace ShoppingApp.Presentation.Controllers
     [AllowAnonymous]
     public class AuthController(IMediator mediator) : BaseController(mediator)
     {
+
         [HttpPost("register")]
         public async Task<ActionResult<AuthResultDto>> PostRegister([FromBody] RegisterDto? registerDto)
         {
@@ -26,8 +27,15 @@ namespace ShoppingApp.Presentation.Controllers
         [HttpPost("refresh-token")]
         public async Task<ActionResult<RefreshTokenResultDto>> PostRefreshToken([FromBody] RefreshTokenDto refreshTokenDto)
         {
-            var result = await _mediator.Send(new RefreshTokenCommand(refreshTokenDto.Token, refreshTokenDto.UserEmail));
+            var result = await _mediator.Send(new RefreshTokenCommand(refreshTokenDto.Token));
             return Ok(result);
+        }
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout([FromBody] LogoutCommand logoutCommand)
+        {
+            await _mediator.Send(logoutCommand);
+
+            return Ok();
         }
     }
 }

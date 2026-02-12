@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿﻿using Microsoft.AspNetCore.Identity;
 
 namespace ShoppingApp.Domain.Identities
 {
-    public class AppRole : IdentityRole<string>
+    public class AppRole : IdentityRole<Ulid>
     {
     }
 }

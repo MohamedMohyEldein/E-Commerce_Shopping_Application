@@ -4,5 +4,5 @@ using ShoppingApp.Domain.Identities;
 
 namespace ShoppingApp.Application.Features.Authentication.Commands
 {
-    public record RefreshTokenCommand(string? RefreshToken, string? UserEmail) : IRequest<RefreshTokenResultDto>;
+    public record RefreshTokenCommand(string? RefreshToken) : IRequest<RefreshTokenResultDto>;
 }

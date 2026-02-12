@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
 using ShoppingApp.Application.Common.Services;
 using ShoppingApp.Application.Features.Authentication.DTOs;
@@ -51,7 +51,7 @@ namespace ShoppingApp.Application.Features.Authentication.Commands.Handlers
 
             var refreshTokenGenerated = _jwtTokenService.GenerateRefreshToken();
 
-            await _unitOfWork.RefreshToken.AddToken(refreshTokenGenerated, user.Id, DateTime.UtcNow.AddMonths(6));
+            await _unitOfWork.RefreshToken.AddToken(refreshTokenGenerated, user.Id.ToString(), DateTime.UtcNow.AddDays(7));
             await _unitOfWork.SaveChangesAsync(cancellationToken);
 
             var authResult = new AuthResultDto

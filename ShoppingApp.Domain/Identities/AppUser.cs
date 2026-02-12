@@ -1,10 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 using ShoppingApp.Domain.Entities;
 
 namespace ShoppingApp.Domain.Identities
 {
-    public class AppUser : IdentityUser<string>
+    public class AppUser : IdentityUser<Ulid>
     {
         [Required]
         public string? FullName { get; set; }

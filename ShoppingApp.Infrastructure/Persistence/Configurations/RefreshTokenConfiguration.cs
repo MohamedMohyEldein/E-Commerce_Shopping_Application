@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+﻿﻿using System.ComponentModel;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ShoppingApp.Domain.Identities;
@@ -12,7 +12,9 @@ namespace ShoppingApp.Infrastructure.Persistence.Configurations
         public void Configure(EntityTypeBuilder<RefreshToken> builder)
         {
             builder.Property(p => p.Id).HasConversion(_ulidConverter).HasMaxLength(26).IsUnicode(false);
+            builder.Property(p => p.UserId).HasConversion(_ulidConverter).HasMaxLength(26).IsUnicode(false);
             builder.HasKey(rt => rt.Id);
+            builder.HasIndex(rt => rt.Token).IsUnique();
 
             builder.Property(rt => rt.Token)
                    .IsRequired()

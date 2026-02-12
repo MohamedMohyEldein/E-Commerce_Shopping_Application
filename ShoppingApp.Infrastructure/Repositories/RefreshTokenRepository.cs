@@ -20,7 +20,7 @@ namespace ShoppingApp.Infrastructure.Repositories
             {
                 Id = Ulid.NewUlid(),
                 Token = refreshToken,
-                UserId = userId,
+                UserId = Ulid.Parse(userId),
                 ExpiryDate = expiryDate,
                 CreationDate = DateTime.UtcNow,
                 IsRevoked = false
@@ -35,11 +35,31 @@ namespace ShoppingApp.Infrastructure.Repositories
             await Task.CompletedTask;
         }
 
-        public async Task<RefreshToken?> FindToken(string refreshToken, string userId)
+        public async Task<RefreshToken?> FindToken(string refreshToken)
         {
-           var token = await _context.RefreshTokens.FirstOrDefaultAsync(rt => rt.Token == refreshToken && rt.User.Id == userId && !rt.IsRevoked && rt.ExpiryDate >= DateTime.UtcNow);
+           var token = await _context.RefreshTokens.Include(rf => rf.User).FirstOrDefaultAsync(rt => rt.Token == refreshToken && !rt.IsRevoked && rt.ExpiryDate >= DateTime.UtcNow);
 
             return token;
         }
+        public async Task ReplaceRefreshTokenAsync(RefreshToken oldRefreshToken, string newRefreshToken, DateTime expiresIn, CancellationToken cancellationToken)
+        {
+
+            oldRefreshToken.Token = newRefreshToken;
+            oldRefreshToken.ExpiryDate = expiresIn;
+            _context.Update(oldRefreshToken);
+            await _context.SaveChangesAsync(cancellationToken);
+        }
+
+        public async Task DeleteRefreshTokenAsync(string refreshToken, CancellationToken cancellationToken)
+        {
+            var token = await _context.RefreshTokens.FirstOrDefaultAsync(rt => rt.Token == refreshToken, cancellationToken);
+            if (token is null)
+            {
+                throw new UnauthorizedAccessException("Invalid refresh token.");
+            }
+            _context.RefreshTokens.Remove(token);
+            await _context.SaveChangesAsync(cancellationToken);
+        }
+
     }
 }
