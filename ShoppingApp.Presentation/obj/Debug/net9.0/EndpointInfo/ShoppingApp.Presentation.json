@@ -1,8 +1,13 @@
 {
   "openapi": "3.0.4",
   "info": {
-    "title": "ShoppingApp.Presentation",
-    "version": "1.0"
+    "title": "Shopping App API",
+    "description": "A comprehensive shopping application API built with ASP.NET Core",
+    "contact": {
+      "name": "Mohamed Mohyeldein",
+      "email": "madeymohey1@gmail.com"
+    },
+    "version": "v1"
   },
   "paths": {
     "/api/Auth/register": {
@@ -101,8 +106,6 @@
         }
       }
     },
-<<<<<<< HEAD
-=======
     "/api/Auth/refresh-token": {
       "post": {
         "tags": [
@@ -151,7 +154,37 @@
         }
       }
     },
->>>>>>> 5a54dd5
+    "/api/Auth/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LogoutCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LogoutCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LogoutCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/CartItem/{CartId}": {
       "get": {
         "tags": [
@@ -1569,11 +1602,7 @@
         }
       }
     },
-<<<<<<< HEAD
-    "/api/Roles": {
-=======
     "/api/Roles/GetAllUsers": {
->>>>>>> 5a54dd5
       "get": {
         "tags": [
           "Roles"
@@ -1583,9 +1612,6 @@
             "description": "OK"
           }
         }
-<<<<<<< HEAD
-      },
-=======
       }
     },
     "/api/Roles/GetAllRoles": {
@@ -1601,7 +1627,6 @@
       }
     },
     "/api/Roles": {
->>>>>>> 5a54dd5
       "post": {
         "tags": [
           "Roles"
@@ -1678,8 +1703,6 @@
         }
       }
     },
-<<<<<<< HEAD
-=======
     "/api/Roles/AddUserClaim": {
       "post": {
         "tags": [
@@ -1736,7 +1759,6 @@
         }
       }
     },
->>>>>>> 5a54dd5
     "/api/WishListItem/{WishListId}": {
       "get": {
         "tags": [
@@ -1942,6 +1964,10 @@
             "type": "string",
             "nullable": true
           },
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
+          },
           "userId": {
             "type": "string",
             "nullable": true
@@ -1953,53 +1979,6 @@
           "fullName": {
             "type": "string",
             "nullable": true
-          },
-          "refreshToken": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "CartItemDto": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "$ref": "#/components/schemas/Ulid"
-          },
-          "cartId": {
-            "$ref": "#/components/schemas/Ulid"
-          },
-          "productVariantId": {
-            "$ref": "#/components/schemas/Ulid"
-          },
-          "imageUrl": {
-            "type": "string",
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "color": {
-            "type": "string",
-            "nullable": true
-          },
-          "size": {
-            "type": "string",
-            "nullable": true
-          },
-          "price": {
-            "type": "number",
-            "format": "double"
-          },
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -2109,25 +2088,6 @@
           "quantity": {
             "type": "integer",
             "format": "int32"
-<<<<<<< HEAD
-          }
-        },
-        "additionalProperties": false
-      },
-      "CreateWishListItemDto": {
-        "type": "object",
-        "properties": {
-          "wishlistId": {
-            "$ref": "#/components/schemas/Ulid"
-          },
-          "productVariantId": {
-            "$ref": "#/components/schemas/Ulid"
-          },
-          "quantity": {
-            "type": "integer",
-            "format": "int32"
-=======
->>>>>>> 5a54dd5
           }
         },
         "additionalProperties": false
@@ -2163,6 +2123,16 @@
           "password": {
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LogoutCommand": {
+        "type": "object",
+        "properties": {
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -2314,19 +2284,13 @@
       },
       "RefreshTokenDto": {
         "required": [
-          "token",
-          "userEmail"
+          "token"
         ],
         "type": "object",
         "properties": {
           "token": {
             "minLength": 1,
             "type": "string"
-          },
-          "userEmail": {
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
           }
         },
         "additionalProperties": false
@@ -2449,6 +2413,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "JWT Authorization header using the Bearer scheme. \r\n\r\nEnter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\"",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
 using ShoppingApp.Application.Common.Services;
 using ShoppingApp.Application.Features.Authentication.DTOs;
@@ -11,13 +11,11 @@ namespace ShoppingApp.Application.Features.Authentication.Commands.Handlers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IJwtTokenService _jwtTokenService;
-        private readonly UserManager<AppUser> _userManager;
 
-        public RefreshTokenCommandHandler(IUnitOfWork unitOfWork, IJwtTokenService jwtTokenService, UserManager<AppUser> userManager)
+        public RefreshTokenCommandHandler(IUnitOfWork unitOfWork, IJwtTokenService jwtTokenService)
         {
             _unitOfWork = unitOfWork;
             _jwtTokenService = jwtTokenService;
-            _userManager = userManager;
         }
 
         public async Task<RefreshTokenResultDto> Handle(RefreshTokenCommand request, CancellationToken cancellationToken)
@@ -26,34 +24,21 @@ namespace ShoppingApp.Application.Features.Authentication.Commands.Handlers
             {
                 throw new BadRequestException("Refresh token is required.");
             }
-            if(request.UserEmail is null)
-            {
-                throw new BadRequestException("User email is required.");
-            }
-            
-            var user = await _userManager.FindByEmailAsync(request.UserEmail);
 
-            if(user is null)
-            {
-                throw new UnauthorizedException("User not found.");
-            }
+            var oldRefreshToken = await _unitOfWork.RefreshToken.FindToken(request.RefreshToken);
 
-            var refToken = await _unitOfWork.RefreshToken.FindToken(request.RefreshToken, user.Id);
-
-            if (refToken is null) throw new UnauthorizedException("Invalid refresh token.");
+            if (oldRefreshToken is null) throw new UnauthorizedException("Invalid refresh token.");
 
 
-            await _unitOfWork.RefreshToken.RevokeRefreshToken(refToken);
-            var refreshToken = _jwtTokenService.GenerateRefreshToken();
-            await _unitOfWork.RefreshToken.AddToken(refreshToken, user.Id, DateTime.UtcNow.AddMonths(6));
-
-            var jwtToken = await _jwtTokenService.GenerateJwtToken(user);
+            var jwtToken = await _jwtTokenService.GenerateJwtToken(oldRefreshToken.User);
+            var newRefreshToken = _jwtTokenService.GenerateRefreshToken();
+            await _unitOfWork.RefreshToken.ReplaceRefreshTokenAsync(oldRefreshToken, newRefreshToken, DateTime.UtcNow.AddDays(7), new CancellationToken());
 
             await _unitOfWork.SaveChangesAsync(cancellationToken);
             return new RefreshTokenResultDto
             {
                 JWTToken = jwtToken,
-                RefreshToken = refreshToken
+                RefreshToken = newRefreshToken
             };
         }
     }

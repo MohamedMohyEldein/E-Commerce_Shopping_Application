@@ -27,6 +27,22 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/Auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "logoutCommand",
+        "Type": "ShoppingApp.Application.Features.Authentication.Commands.LogoutCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingApp.Presentation.Controllers.AuthController",
     "Method": "PostRefreshToken",
     "RelativePath": "api/Auth/refresh-token",
     "HttpMethod": "POST",
@@ -940,19 +956,6 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
-<<<<<<< HEAD
-    "Method": "GetAllRoles",
-    "RelativePath": "api/Roles",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
-=======
->>>>>>> 5a54dd5
     "Method": "CreateRole",
     "RelativePath": "api/Roles",
     "HttpMethod": "POST",
@@ -969,8 +972,6 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
-<<<<<<< HEAD
-=======
     "Method": "AddUserClaim",
     "RelativePath": "api/Roles/AddUserClaim",
     "HttpMethod": "POST",
@@ -997,7 +998,6 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
->>>>>>> 5a54dd5
     "Method": "AssignUserToRole",
     "RelativePath": "api/Roles/AssignUserToRole",
     "HttpMethod": "POST",
@@ -1019,8 +1019,6 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
-<<<<<<< HEAD
-=======
     "Method": "DeleteUser",
     "RelativePath": "api/Roles/DeleteUser",
     "HttpMethod": "DELETE",
@@ -1057,7 +1055,6 @@
   },
   {
     "ContainingType": "ShoppingApp.Presentation.Controllers.RolesController",
->>>>>>> 5a54dd5
     "Method": "GetUserRoles",
     "RelativePath": "api/Roles/GetUserRoles",
     "HttpMethod": "GET",

@@ -36,7 +36,7 @@ namespace ShoppingApp.Application.Features.Orders.Commands.Handlers
             order.Id = Ulid.NewUlid();
             order.OrderDate = DateTime.UtcNow;
             order.Status = OrderStatus.Pending;
-            order.UserId = request.Order.UserId.ToString();
+            order.UserId = request.Order.UserId;
 
             await _unitOfWork.Orders.AddAsync(order);
             await _unitOfWork.SaveChangesAsync(cancellationToken);

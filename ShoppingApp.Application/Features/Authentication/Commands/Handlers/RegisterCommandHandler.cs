@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
 using ShoppingApp.Application.Common.Services;
 using ShoppingApp.Application.Features.Authentication.DTOs;
@@ -27,11 +27,8 @@ namespace ShoppingApp.Application.Features.Authentication.Commands.Handlers
             {
                 throw new BadRequestException("Register DTO cannot be null.");
             }
-<<<<<<< HEAD
-            if (request.Email is null || request.Password is null || request.FullName is null)
-=======
+
             if (request.RegisterDto.Email is null || request.RegisterDto.Password is null || request.RegisterDto.FullName is null)
->>>>>>> 5a54dd5
             { 
                 throw new BadRequestException("Email, Password and full name cannot be null."); 
             }
@@ -45,21 +42,14 @@ namespace ShoppingApp.Application.Features.Authentication.Commands.Handlers
             
             var user = new AppUser
             {
-<<<<<<< HEAD
+
                 Id = Ulid.NewUlid(),
-                UserName = request.Email,
-                Email = request.Email,
-               FullName = request.FullName
-            }, request.Password);
-=======
-                Id = Ulid.NewUlid().ToString(),
                 UserName = request.RegisterDto.Email,
                 Email = request.RegisterDto.Email,
                 FullName = request.RegisterDto.FullName,
             };
 
             var identityResult = await _userManager.CreateAsync(user, request.RegisterDto.Password);
->>>>>>> 5a54dd5
 
             if (identityResult.Succeeded)
             {

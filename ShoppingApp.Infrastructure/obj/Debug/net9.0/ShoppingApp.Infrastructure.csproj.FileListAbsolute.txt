@@ -1,4 +1,5 @@
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\bin\Debug\net9.0\ShoppingApp.Infrastructure.deps.json
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\bin\Debug\net9.0\ShoppingApp.Infrastructure.runtimeconfig.json
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\bin\Debug\net9.0\ShoppingApp.Infrastructure.dll
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\bin\Debug\net9.0\ShoppingApp.Infrastructure.pdb
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\bin\Debug\net9.0\ShoppingApp.Application.dll
@@ -10,11 +11,10 @@ D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ShoppingApp.Infrastructure.AssemblyInfoInputs.cache
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ShoppingApp.Infrastructure.AssemblyInfo.cs
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ShoppingApp.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ShoppingApp.Infrastructure.sourcelink.json
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\Shopping.2E0E0B52.Up2Date
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ShoppingApp.Infrastructure.dll
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\refint\ShoppingApp.Infrastructure.dll
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ShoppingApp.Infrastructure.pdb
-D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ref\ShoppingApp.Infrastructure.dll
-D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\bin\Debug\net9.0\ShoppingApp.Infrastructure.runtimeconfig.json
 D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ShoppingApp.Infrastructure.genruntimeconfig.cache
-D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ShoppingApp.Infrastructure.sourcelink.json
+D:\Asp.NetCore_Projects\ShoppingAppSolution\ShoppingApp.Infrastructure\obj\Debug\net9.0\ref\ShoppingApp.Infrastructure.dll

@@ -17,7 +17,7 @@ namespace ShoppingApp.Infrastructure.Repositories
 
         public async Task<Order?> GetUserOrderByIdAsync(Ulid? orderId, Ulid? userId)
         {
-            return await _context.Orders.FirstOrDefaultAsync(p => p.Id == orderId && p.UserId == userId.ToString());
+            return await _context.Orders.FirstOrDefaultAsync(p => p.Id == orderId && p.UserId == userId);
         }
         public void Dispose()
         {
@@ -26,7 +26,7 @@ namespace ShoppingApp.Infrastructure.Repositories
 
         public async Task<List<Order>> GetAllUserOrdersAsync(Ulid? UserId)
         {
-            return await _context.Orders.Where(o => o.UserId == UserId.ToString()).ToListAsync();
+            return await _context.Orders.Where(o => o.UserId == UserId).ToListAsync();
         }
     }
 }
