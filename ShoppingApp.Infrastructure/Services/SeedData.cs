@@ -1,5 +1,6 @@
-﻿using ShoppingApp.Domain.Entities;
-using ShoppingApp.Domain.Enums;
+﻿﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Logging;
+using ShoppingApp.Domain.Entities;
 using ShoppingApp.Domain.Identities;
 using ShoppingApp.Infrastructure.Persistence;
 
@@ -7,116 +8,156 @@ namespace ShoppingApp.Infrastructure.Services
 {
     public static class SeedData
     {
-        public static async Task SeedAsync(ApplicationDbContext db)
+        public static async Task SeedRolesAndSuperAdminAsync(
+            UserManager<AppUser> userManager, 
+            RoleManager<AppRole> roleManager,
+            ILogger logger)
         {
-            // ensure database exists / migrations applied (optional)
-            await db.Database.EnsureCreatedAsync();
-
-            // if already seeded, bail out
-            if (db.Users.Any()) return;
-
-            // create user
-            var user = new AppUser
+            try
             {
-                Id = Ulid.NewUlid().ToString(),        // runtime ULID
-                UserName = "testuser",
-                NormalizedUserName = "TESTUSER",
-                Email = "test@shop.com",
-                NormalizedEmail = "TEST@SHOP.COM",
-                EmailConfirmed = true,
-                PasswordHash = "FAKE_HASH"
-            };
+                // Define all roles
+                string[] roleNames = { "SuperAdmin", "Admin", "AppUser", "Seller" };
 
-            // categories
-            var cat1 = new Category
+                // Create roles if they don't exist
+                foreach (var roleName in roleNames)
+                {
+                    var roleExists = await roleManager.RoleExistsAsync(roleName);
+                    if (!roleExists)
+                    {
+                        var role = new AppRole
+                        {
+                            Id = Ulid.NewUlid(),
+                            Name = roleName
+                        };
+                        var result = await roleManager.CreateAsync(role);
+                        
+                        if (result.Succeeded)
+                        {
+                            logger.LogInformation($"Role '{roleName}' created successfully.");
+                        }
+                        else
+                        {
+                            logger.LogError($"Failed to create role '{roleName}': {string.Join(", ", result.Errors.Select(e => e.Description))}");
+                        }
+                    }
+                }
+
+                // Create super admin user
+                const string superAdminEmail = "madeymohey1@gmail.com";
+                const string superAdminPassword = "Madey.mohey811";
+                
+                var superAdmin = await userManager.FindByEmailAsync(superAdminEmail);
+                
+                if (superAdmin == null)
+                {
+                    superAdmin = new AppUser
+                    {
+                        Id = Ulid.NewUlid(),
+                        UserName = "SuperAdmin",
+                        Email = superAdminEmail,
+                        EmailConfirmed = true,
+                        FullName = "Super Admin"
+                    };
+
+                    var createResult = await userManager.CreateAsync(superAdmin, superAdminPassword);
+
+                    if (createResult.Succeeded)
+                    {
+                        logger.LogInformation($"Super admin user '{superAdminEmail}' created successfully.");
+
+                        // Create Cart and Wishlist for the super admin
+                        // Note: This requires ApplicationDbContext, so we'll handle this separately
+                        
+                        // Assign all roles to super admin
+                        foreach (var roleName in roleNames)
+                        {
+                            var addToRoleResult = await userManager.AddToRoleAsync(superAdmin, roleName);
+                            if (addToRoleResult.Succeeded)
+                            {
+                                logger.LogInformation($"Super admin assigned to role '{roleName}'.");
+                            }
+                            else
+                            {
+                                logger.LogError($"Failed to assign super admin to role '{roleName}': {string.Join(", ", addToRoleResult.Errors.Select(e => e.Description))}");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        logger.LogError($"Failed to create super admin user: {string.Join(", ", createResult.Errors.Select(e => e.Description))}");
+                    }
+                }
+                else
+                {
+                    logger.LogInformation($"Super admin user '{superAdminEmail}' already exists.");
+                    
+                    // Ensure super admin has all roles
+                    foreach (var roleName in roleNames)
+                    {
+                        if (!await userManager.IsInRoleAsync(superAdmin, roleName))
+                        {
+                            var addToRoleResult = await userManager.AddToRoleAsync(superAdmin, roleName);
+                            if (addToRoleResult.Succeeded)
+                            {
+                                logger.LogInformation($"Super admin assigned to role '{roleName}'.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
             {
-                Id = Ulid.NewUlid(),
-                Name = "Electronics",
-                Description = "Electronic devices",
-                ImageUrl = "/images/categories/electronics.jpg"
-            };
+                logger.LogError(ex, "An error occurred while seeding roles and super admin.");
+                throw;
+            }
+        }
 
-            var cat2 = new Category
+        public static async Task SeedCartAndWishlistForSuperAdminAsync(
+            ApplicationDbContext db,
+            UserManager<AppUser> userManager,
+            ILogger logger)
+        {
+            try
             {
-                Id = Ulid.NewUlid(),
-                Name = "Clothing",
-                Description = "Apparel",
-                ImageUrl = "/images/categories/clothing.jpg"
-            };
+                const string superAdminEmail = "madeymohey1@gmail.com";
+                var superAdmin = await userManager.FindByEmailAsync(superAdminEmail);
 
-            // products
-            var prod1 = new Product
+                if (superAdmin != null)
+                {
+                    // Check if cart exists
+                    var existingCart = db.Carts.FirstOrDefault(c => c.UserId == superAdmin.Id);
+                    if (existingCart == null)
+                    {
+                        var cart = new Cart
+                        {
+                            Id = Ulid.NewUlid(),
+                            UserId = superAdmin.Id
+                        };
+                        await db.Carts.AddAsync(cart);
+                        logger.LogInformation("Cart created for super admin.");
+                    }
+
+                    // Check if wishlist exists
+                    var existingWishlist = db.Wishlists.FirstOrDefault(w => w.UserId == superAdmin.Id);
+                    if (existingWishlist == null)
+                    {
+                        var wishlist = new Wishlist
+                        {
+                            Id = Ulid.NewUlid(),
+                            UserId = superAdmin.Id
+                        };
+                        await db.Wishlists.AddAsync(wishlist);
+                        logger.LogInformation("Wishlist created for super admin.");
+                    }
+
+                    await db.SaveChangesAsync();
+                }
+            }
+            catch (Exception ex)
             {
-                Id = Ulid.NewUlid(),
-                CategoryId = cat1.Id,
-                Name = "Smartphone",
-                Description = "Latest model",
-                Price = 999,
-                StockQuantity = 50,
-                ImageUrl = "/images/products/smartphone.jpg",
-                CreatedAt = new DateTime(2024, 1, 1),
-                UpdatedAt = new DateTime(2024, 1, 1)
-            };
-
-            var prod2 = new Product
-            {
-                Id = Ulid.NewUlid(),
-                CategoryId = cat2.Id,
-                Name = "T-Shirt",
-                Description = "Cotton t-shirt",
-                Price = 29,
-                StockQuantity = 200,
-                ImageUrl = "/images/products/tshirt.jpg",
-                CreatedAt = new DateTime(2024, 1, 1),
-                UpdatedAt = new DateTime(2024, 1, 1)
-            };
-
-            // product variants
-            var pv1 = new ProductVariant
-            {
-                Id = Ulid.NewUlid(),
-                ProductId = prod1.Id,
-                Color = "Black",
-                Size = "128GB",
-                StockQuantity = 25,
-                ImageUrl = "/images/variants/phone_black.jpg"
-            };
-
-            var pv2 = new ProductVariant
-            {
-                Id = Ulid.NewUlid(),
-                ProductId = prod2.Id,
-                Color = "Red",
-                Size = "L",
-                StockQuantity = 80,
-                ImageUrl = "/images/variants/shirt_red.jpg"
-            };
-
-            // cart + item
-            var cart = new Cart { Id = Ulid.NewUlid(), UserId = user.Id };
-            var cartItem = new CartItem { Id = Ulid.NewUlid(), CartId = cart.Id, ProductVariantId = pv2.Id, Quantity = 2 };
-
-            // wishlist + item
-            var wishlist = new Wishlist { Id = Ulid.NewUlid(), UserId = user.Id };
-            var wishlistItem = new WishlistItem { Id = Ulid.NewUlid(), WishlistId = wishlist.Id, ProductVariantId = prod1.Id };
-
-            // order + item
-            var order = new Order { Id = Ulid.NewUlid(), UserId = user.Id, OrderDate = new DateTime(2024, 2, 10), Status = OrderStatus.Pending};
-            var orderItem = new OrderItem { Id = Ulid.NewUlid(), OrderId = order.Id, ProductVariantId = pv1.Id, Quantity = 2 };
-
-            // Add to context
-            db.Users.Add(user);
-            db.Categories.AddRange(cat1, cat2);
-            db.Products.AddRange(prod1, prod2);
-            db.ProductVariants.AddRange(pv1, pv2);
-            db.Carts.Add(cart);
-            db.CartItems.Add(cartItem);
-            db.Wishlists.Add(wishlist);
-            db.WishlistItems.Add(wishlistItem);
-            db.Orders.Add(order);
-            db.OrderItems.Add(orderItem);
-
-            await db.SaveChangesAsync();
+                logger.LogError(ex, "An error occurred while seeding cart and wishlist for super admin.");
+                throw;
+            }
         }
     }
 }

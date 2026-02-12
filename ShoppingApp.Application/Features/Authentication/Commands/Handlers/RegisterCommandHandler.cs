@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
 using ShoppingApp.Application.Common.Services;
 using ShoppingApp.Application.Features.Authentication.DTOs;
@@ -43,7 +43,7 @@ namespace ShoppingApp.Application.Features.Authentication.Commands.Handlers
             var user = new AppUser
             {
 
-                Id = Ulid.NewUlid().ToString(),
+                Id = Ulid.NewUlid(),
                 UserName = request.RegisterDto.Email,
                 Email = request.RegisterDto.Email,
                 FullName = request.RegisterDto.FullName,

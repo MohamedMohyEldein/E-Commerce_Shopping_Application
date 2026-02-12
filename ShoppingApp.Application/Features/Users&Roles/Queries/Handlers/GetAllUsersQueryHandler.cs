@@ -25,7 +25,7 @@ namespace ShoppingApp.Application.Features.Users_Roles.Queries.Handlers
 
                 usersDto.Add(new UserDTO
                 {
-                    Id = user.Id,
+                    Id = user.Id.ToString(),
                     UserName = user.FullName,
                     Email = user.Email,
                     Roles = roles.ToList()
